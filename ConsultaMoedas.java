@@ -1,5 +1,4 @@
 import com.google.gson.Gson;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URI;
@@ -22,7 +21,7 @@ public class ConsultaMoedas {
 
         //Faz a conexão com a API
         String apiKey = getApiKey();
-        URI endereco = URI.create("https://v6.exchangerate-api.com/v6/19d9a687f895f1dafdc3d323/latest/" + codigoMoeda);
+        URI endereco = URI.create("https://v6.exchangerate-api.com/v6/" + apiKey + "/latest/" + codigoMoeda);
 
         try (HttpClient client = HttpClient.newHttpClient()) {
             HttpRequest request = HttpRequest.newBuilder()
