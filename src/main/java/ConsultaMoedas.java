@@ -32,7 +32,7 @@ public class ConsultaMoedas {
                     .send(request, HttpResponse.BodyHandlers.ofString());
             String json = response.body();
 
-            System.out.println("JSON recebido da API: " + json); //Teste do Json no cosole
+//            System.out.println("JSON recebido da API: " + json); //Teste do Json no cosole
 
             return new Gson().fromJson(json, Moeda.class);
         } catch (Exception e) {

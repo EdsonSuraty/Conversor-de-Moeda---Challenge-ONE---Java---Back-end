@@ -18,5 +18,4 @@ public record Moeda(String base_code, Map<String, Double> conversion_rates) {
 
         return taxasFiltradas;
     }
-
-};
+}
